@@ -8,6 +8,7 @@ set -euo
 
 docker run \
     -p 5678:5678 \
+    -e N8N_TEMPLATES_ENABLED="false" \    
     -v /.env \
     -v ${DATA_FOLDER}/n8n:/home/node/.n8n \
     -e N8N_ENCRYPTION_KEY \
